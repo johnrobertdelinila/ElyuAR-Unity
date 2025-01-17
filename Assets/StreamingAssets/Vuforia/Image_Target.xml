@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="coriander" size="1.000000 0.667021" />
+    <ImageTarget name="basil" size="1.000000 0.666667" />
+    <ImageTarget name="bamboo" size="1.000000 0.750000" />
+    <ImageTarget name="lemon-tree" size="1.000000 0.750000" />
+    <ImageTarget name="aloe-vera-plant" size="1.000000 0.666667" />
+    <ImageTarget name="swifttour" size="1.000000 1.500000" />
+  </Tracking>
+</QCARConfig>
