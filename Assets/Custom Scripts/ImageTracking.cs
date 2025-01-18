@@ -612,6 +612,11 @@ public class ImageTracking : MonoBehaviour
             if (trackedImageManager != null)
             {
                 trackedImageManager.enabled = true;
+                Debug.Log("[AR_SETUP] Tracked Image Manager enabled");
+            }
+            else
+            {
+                Debug.LogError("[AR_SETUP] Tracked Image Manager is null!");
             }
             
             // Reset AR Session after initialization
@@ -622,6 +627,8 @@ public class ImageTracking : MonoBehaviour
             Debug.LogError("[AR_SETUP] Camera permission denied!");
         }
         #endif
+
+        yield break;  // Ensure all paths return
     }
 
     public void OnMapButtonClicked()
@@ -740,7 +747,7 @@ public class ImageTracking : MonoBehaviour
         QualitySettings.vSyncCount = 0;
 
         // Reduce texture quality
-        QualitySettings.masterTextureLimit = 1; // Use half-resolution textures
+        QualitySettings.globalTextureMipmapLimit = 1; // Use half-resolution textures
         QualitySettings.globalTextureMipmapLimit = 1;
         QualitySettings.lodBias = LOD_BIAS;
 
@@ -912,5 +919,62 @@ public class ImageTracking : MonoBehaviour
         {
             Debug.LogError($"[AR_MAPS] Error opening maps: {e.Message}");
         }
+    }
+
+    private void UpdateTrackableImage(ARTrackedImage trackedImage, bool isInitialPlacement)
+    {
+        string imageName = trackedImage.referenceImage.name;
+        Debug.Log($"[AR_TRACKING] Updating image: {imageName}, IsNew: {isInitialPlacement}");
+
+        // Find matching prefab in the array
+        GameObject prefab = null;
+        for (int i = 0; i < modelPrefabs.Length; i++)
+        {
+            if (modelPrefabs[i].name == imageName)
+            {
+                prefab = modelPrefabs[i];
+                Debug.Log($"[AR_TRACKING] Found prefab for {imageName}. Prefab rotation in inspector: {prefab.transform.eulerAngles}");
+                break;
+            }
+        }
+
+        if (prefab == null)
+        {
+            Debug.LogWarning($"[AR_TRACKING] No prefab found for image: {imageName}");
+            return;
+        }
+
+        GameObject model;
+        if (isInitialPlacement)
+        {
+            // Store the prefab's initial rotation BEFORE instantiating
+            Vector3 prefabRotation = prefab.transform.eulerAngles;
+            Debug.Log($"[AR_TRACKING] Original prefab rotation from inspector: X={prefabRotation.x}, Y={prefabRotation.y}, Z={prefabRotation.z}");
+
+            // First instantiate with identity rotation
+            model = Instantiate(prefab, trackedImage.transform.position, Quaternion.identity);
+            spawnedModels[imageName] = model;
+
+            // Force the exact rotation from the prefab
+            model.transform.rotation = Quaternion.identity; // Reset rotation first
+            model.transform.eulerAngles = prefabRotation;  // Apply prefab rotation
+            
+            Debug.Log($"[AR_TRACKING] Applied rotation to spawned model: X={model.transform.eulerAngles.x}, Y={model.transform.eulerAngles.y}, Z={model.transform.eulerAngles.z}");
+        }
+        else
+        {
+            // Get the existing model
+            model = spawnedModels[imageName];
+            if (model == null) return;
+
+            // Only update position, preserve rotation exactly
+            Vector3 currentRotation = model.transform.eulerAngles;
+            model.transform.position = trackedImage.transform.position;
+            model.transform.eulerAngles = currentRotation;
+            
+            Debug.Log($"[AR_TRACKING] Maintained rotation on update: X={currentRotation.x}, Y={currentRotation.y}, Z={currentRotation.z}");
+        }
+
+        Debug.Log($"[AR_TRACKING] Final transform - Position: {model.transform.position}, Rotation: X={model.transform.eulerAngles.x}, Y={model.transform.eulerAngles.y}, Z={model.transform.eulerAngles.z}");
     }
 }
