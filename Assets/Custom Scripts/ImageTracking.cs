@@ -14,7 +14,7 @@ public class ImageTracking : MonoBehaviour
     private void Awake()
     {
         trackedImageManager = GetComponent<ARTrackedImageManager>();
-        
+
         // Initially hide all models
         foreach (var modelInfo in modelInfos)
         {
@@ -33,6 +33,16 @@ public class ImageTracking : MonoBehaviour
     private void OnDisable()
     {
         trackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
+        
+        // Clean up when leaving scene
+        foreach (var model in activeModels.Values)
+        {
+            if (model != null)
+            {
+                model.SetActive(false);
+            }
+        }
+        activeModels.Clear();
     }
 
     private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
@@ -40,58 +50,61 @@ public class ImageTracking : MonoBehaviour
         // Handle added images
         foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
-            ToggleModelVisibility(trackedImage, true);
+            UpdateModelTransform(trackedImage, true);
         }
 
         // Handle updated images
         foreach (ARTrackedImage trackedImage in eventArgs.updated)
         {
-            UpdateModelVisibility(trackedImage);
+            if (trackedImage.trackingState == TrackingState.Tracking)
+            {
+                UpdateModelTransform(trackedImage, true);
+            }
+            else
+            {
+                UpdateModelTransform(trackedImage, false);
+            }
         }
 
         // Handle removed images
         foreach (ARTrackedImage trackedImage in eventArgs.removed)
         {
-            ToggleModelVisibility(trackedImage, false);
+            UpdateModelTransform(trackedImage, false);
         }
     }
 
-    private void ToggleModelVisibility(ARTrackedImage trackedImage, bool show)
+    private void UpdateModelTransform(ARTrackedImage trackedImage, bool show)
     {
         string imageName = trackedImage.referenceImage.name;
         ModelInfo info = System.Array.Find(modelInfos, x => x.name == imageName);
         
         if (info?.prefab == null) return;
 
+        // Toggle visibility
         info.prefab.SetActive(show);
         
         if (show)
         {
+            // Store the original rotation of the prefab
+            Quaternion originalRotation = info.prefab.transform.rotation;
+            
+            // Update position to be above the tracked image
+            Vector3 imageCenter = trackedImage.transform.position;
+            Vector3 imageUp = trackedImage.transform.up;
+            
+            // Position the model above the image
+            info.prefab.transform.position = imageCenter + (imageUp * 0.1f); // Adjust 0.1f as needed
+            
+            // Maintain the prefab's original rotation
+            info.prefab.transform.rotation = originalRotation;
+            
             activeModels[imageName] = info.prefab;
-            Debug.Log($"[AR_TRACKING] Showing model for {imageName}");
+            Debug.Log($"[AR_TRACKING] Updated model for {imageName} - Position: {info.prefab.transform.position}, Rotation: {info.prefab.transform.rotation.eulerAngles}");
         }
         else
         {
             activeModels.Remove(imageName);
             Debug.Log($"[AR_TRACKING] Hiding model for {imageName}");
-        }
-    }
-
-    private void UpdateModelVisibility(ARTrackedImage trackedImage)
-    {
-        string imageName = trackedImage.referenceImage.name;
-        
-        if (activeModels.TryGetValue(imageName, out GameObject model))
-        {
-            bool isTracking = trackedImage.trackingState == TrackingState.Tracking;
-            model.SetActive(isTracking);
-
-            if (isTracking)
-            {
-                // Update only the position
-                model.transform.position = trackedImage.transform.position;
-                Debug.Log($"[AR_TRACKING] Updated {imageName} position");
-            }
         }
     }
 }
