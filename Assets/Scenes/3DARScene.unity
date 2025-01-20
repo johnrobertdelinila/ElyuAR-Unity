@@ -842,7 +842,7 @@ PrefabInstance:
     - target: {fileID: 9222785168694434464, guid: 41ab1084db0416847aa346afff005130,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -964
+      value: 497.4
       objectReference: {fileID: 0}
     - target: {fileID: 9222785168694434464, guid: 41ab1084db0416847aa346afff005130,
         type: 3}
@@ -885,6 +885,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 178235969}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &178235971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9222785168694434465, guid: 41ab1084db0416847aa346afff005130,
+    type: 3}
+  m_PrefabInstance: {fileID: 178235969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &237169682
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,7 +925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -384.8}
+  m_AnchoredPosition: {x: 0, y: -492.5}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237169684
@@ -1044,6 +1050,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039577381050841356, guid: eaabd2e40622b4864b123b6cd04fdd5c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039577381050841356, guid: eaabd2e40622b4864b123b6cd04fdd5c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039577381050841356, guid: eaabd2e40622b4864b123b6cd04fdd5c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 7039577381050841356, guid: eaabd2e40622b4864b123b6cd04fdd5c,
         type: 3}
@@ -1391,12 +1412,17 @@ PrefabInstance:
     - target: {fileID: 5666436998516386147, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
         type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnShowInfoPanelClicked
+      value: OnShowPanelButtonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 5666436998516386147, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
         type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ImageTracking, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666436998516386156, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
+        type: 3}
+      propertyPath: m_Name
+      value: show info
       objectReference: {fileID: 0}
     - target: {fileID: 5666436998516386156, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
         type: 3}
@@ -1481,7 +1507,7 @@ PrefabInstance:
     - target: {fileID: 5666436998607641890, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
         type: 3}
       propertyPath: m_text
-      value: get info
+      value: show info
       objectReference: {fileID: 0}
     - target: {fileID: 5666436998999972744, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
         type: 3}
@@ -1516,7 +1542,7 @@ PrefabInstance:
     - target: {fileID: 5666436998999972746, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
         type: 3}
       propertyPath: m_text
-      value: get info
+      value: show info
       objectReference: {fileID: 0}
     - target: {fileID: 5666436999896688735, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
         type: 3}
@@ -1551,7 +1577,7 @@ PrefabInstance:
     - target: {fileID: 5666437000220211496, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
         type: 3}
       propertyPath: m_text
-      value: get info
+      value: show info
       objectReference: {fileID: 0}
     - target: {fileID: 5666437000220212950, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
         type: 3}
@@ -1951,7 +1977,7 @@ PrefabInstance:
     - target: {fileID: 8745846015642417916, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
         type: 3}
       propertyPath: m_text
-      value: get info
+      value: show info
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1971,7 +1997,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 272900314}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1271341931}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf6bf84803049414cbd06aaea646660b, type: 3}
@@ -2421,7 +2447,7 @@ PrefabInstance:
     - target: {fileID: 9222785168694434464, guid: 41ab1084db0416847aa346afff005130,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -964
+      value: 497.4
       objectReference: {fileID: 0}
     - target: {fileID: 9222785168694434464, guid: 41ab1084db0416847aa346afff005130,
         type: 3}
@@ -3314,6 +3340,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1049801715}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1271341931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4979417800921203569, guid: 69ef0843fdf60fd4fb5c2a6fe4de6195,
+    type: 3}
+  m_PrefabInstance: {fileID: 272900314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1334262477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9222785168694434465, guid: 41ab1084db0416847aa346afff005130,
+    type: 3}
+  m_PrefabInstance: {fileID: 327763461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1627445658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3570,7 +3608,7 @@ PrefabInstance:
     - target: {fileID: 3257686548136090565, guid: 41ab1084db0416847aa346afff005130,
         type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShareInfo
+      value: OnShareButtonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 3257686548136090565, guid: 41ab1084db0416847aa346afff005130,
         type: 3}
@@ -3758,7 +3796,7 @@ PrefabInstance:
     - target: {fileID: 9222785168694434464, guid: 41ab1084db0416847aa346afff005130,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -964
+      value: 497.4
       objectReference: {fileID: 0}
     - target: {fileID: 9222785168694434464, guid: 41ab1084db0416847aa346afff005130,
         type: 3}
@@ -4072,6 +4110,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3013372413757946157, guid: 16efe59c73996ed4684a21d57cb0c49b,
     type: 3}
   m_PrefabInstance: {fileID: 2072369904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2082117902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9222785168694434465, guid: 41ab1084db0416847aa346afff005130,
+    type: 3}
+  m_PrefabInstance: {fileID: 1627445658}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2089058451
 PrefabInstance:
@@ -4389,8 +4433,8 @@ MonoBehaviour:
     title: Macho Temple
     description: The Ma-Cho or Mazu Temple is a Taoist temple to the Chinese Sea
       Goddess Mazu located on Quezon Avenue in Barangay II, San Fernando, La Union.
-    latitude: 0
-    longitude: 0
+    latitude: 16.6212
+    longitude: 120.3175
     audio: {fileID: 8300000, guid: 1464a5b322cbd4e58823ea9c65dae770, type: 3}
     websiteUrl: https://machotemple.org
   - prefab: {fileID: 1045831784}
@@ -4450,6 +4494,14 @@ MonoBehaviour:
     longitude: 0
     audio: {fileID: 8300000, guid: 186de034ce7084841a65dbb3c059efab, type: 3}
     websiteUrl: https://launion.gov.ph/la-union-circuits/northern-circuit/north-circuit-bangar-la-union/
+  hiddenInfoPanel: {fileID: 55868328}
+  showPanelButton: {fileID: 1271341931}
+  titleText: {fileID: 2089573064}
+  descriptionText: {fileID: 237169684}
+  audioSource: {fileID: 55868329}
+  mapButton: {fileID: 1334262477}
+  urlButton: {fileID: 2082117902}
+  shareButton: {fileID: 178235971}
 --- !u!1 &2112851364
 GameObject:
   m_ObjectHideFlags: 0
@@ -4533,7 +4585,6 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 2003863143}
   - {fileID: 2100066414}
-  - {fileID: 55868334}
   - {fileID: 950955728}
   - {fileID: 933088047}
   - {fileID: 261818110}
@@ -4542,3 +4593,4 @@ SceneRoots:
   - {fileID: 2089058451}
   - {fileID: 1049801715}
   - {fileID: 1045831783}
+  - {fileID: 55868334}
