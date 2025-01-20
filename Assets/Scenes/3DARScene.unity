@@ -388,7 +388,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2100066416}
         m_TargetAssemblyTypeName: ImageTracking, Assembly-CSharp
-        m_MethodName: CloseHiddenPanel
+        m_MethodName: OnInfoPanelClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4444,10 +4444,10 @@ MonoBehaviour:
       town located at the western part of the province, lies the majestic TANGADAN
       FALLS. Majestic as it seems since it is analogically compared to a masterpiece
       that was magically turned into a reality.
-    latitude: 0
-    longitude: 0
+    latitude: 16.6437
+    longitude: 120.4487
     audio: {fileID: 8300000, guid: a2b832276359147f9b9bec83aafe9068, type: 3}
-    websiteUrl: https://launion.gov.ph/tangadan-falls-hidden-treasure-of-la-union/
+    websiteUrl: https://mapcarta.com/N2399262100
   - prefab: {fileID: 395580882}
     name: Baluarte
     title: Baluarte
@@ -4456,10 +4456,10 @@ MonoBehaviour:
       located at Barangay Victoria, Municipality of Luna. Spaniards created the tower
       as a lookout point for the approaching attacks of Japanese, Chinese, and Moro
       pirates and other conquerors in the coastal towns of La Union. '
-    latitude: 0
-    longitude: 0
+    latitude: 16.8568
+    longitude: 120.3729
     audio: {fileID: 8300000, guid: 61a213cf0fa5c41419cad2351f491e66, type: 3}
-    websiteUrl: https://launion.gov.ph/pagwanawanan-a-glimpse-of-the-past/
+    websiteUrl: https://evendo.com/locations/philippines/ilocos-region/landmark/baluarte-watch-tower#:~:text=Peralta%20St.,at%20the%20coordinates%2016.8567791%2C%20120.3728866.
   - prefab: {fileID: 843640388}
     name: Eco Park
     title: Agoo Eco Park
@@ -4467,10 +4467,10 @@ MonoBehaviour:
       Union, Philippines. It is an area known for its natural beauty, scenic views,
       and adventure activities. Visitors can enjoy a range of outdoor activities
       at Agoo Eco Park, such as fishing, bird watching, camping, and more.
-    latitude: 0
-    longitude: 0
+    latitude: 16.3534
+    longitude: 120.3409
     audio: {fileID: 8300000, guid: e34fe91adcb944e688968cd81ae28473, type: 3}
-    websiteUrl: 
+    websiteUrl: https://mapcarta.com/N9602643665
   - prefab: {fileID: 684591438}
     name: Christopher Parish
     title: St. Christopher Parish Church
@@ -4478,10 +4478,10 @@ MonoBehaviour:
       Its facade has a mixture of Baroque, Gothic, and Moorish embellishments. This
       is the only church in the north with three belfries and features an eye-catching
       ceiling mural.
-    latitude: 0
-    longitude: 0
+    latitude: 16.8934
+    longitude: 120.424
     audio: {fileID: 8300000, guid: 6b3ead62fc2004f1a82af0b23f55a26d, type: 3}
-    websiteUrl: https://launion.gov.ph/la-union-circuits/northern-circuit/north-circuit-bangar-la-union/
+    websiteUrl: https://ph.geoview.info/st_christopher_church,165253147w
   - prefab: {fileID: 1049801716}
     name: Grape Farm
     title: Gapuz Grape Farms
@@ -4490,10 +4490,10 @@ MonoBehaviour:
       four decades, founder and so-called \u201CGrape King\u201D Avelino Lomboy has
       supplied the country with freshly grown grapes. We have a total of 74 Grape
       Farms from the 5 barangays."
-    latitude: 0
-    longitude: 0
+    latitude: 16.46583
+    longitude: 120.33364
     audio: {fileID: 8300000, guid: 186de034ce7084841a65dbb3c059efab, type: 3}
-    websiteUrl: https://launion.gov.ph/la-union-circuits/northern-circuit/north-circuit-bangar-la-union/
+    websiteUrl: https://thefootmole.blogspot.com/2015/08/gapuzgrapesfarm.html
   hiddenInfoPanel: {fileID: 55868328}
   showPanelButton: {fileID: 1271341931}
   titleText: {fileID: 2089573064}

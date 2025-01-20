@@ -152,8 +152,8 @@ public class ImageTracking : MonoBehaviour
         else
         {
             activeModels.Remove(imageName);
-            // Only hide UI when model is actually hidden
-            HideUI();
+            // Only hide the show panel button, not the info panel
+            showPanelButton.SetActive(false);
             Debug.Log($"[AR_TRACKING] Hiding model for {imageName}");
         }
     }
