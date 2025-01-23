@@ -77,3 +77,23 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: Grape Farm
     m_Texture: {fileID: 2800000, guid: d44f3192ae39243b0835cf857d773962, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5448118915020738136
+      m_GuidHigh: 12354631935532076443
+    m_SerializedTextureGuid:
+      m_GuidLow: 10705869089280146906
+      m_GuidHigh: 15837951575257931993
+    m_Size: {x: 0.10481928, y: 0.14842574}
+    m_SpecifySize: 1
+    m_Name: Tapuakan River
+    m_Texture: {fileID: 2800000, guid: ee60bddae3369492d960166d0bb5cbdb, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5361773577393215531
+      m_GuidHigh: 3831700427811540620
+    m_SerializedTextureGuid:
+      m_GuidLow: 12977046687685385838
+      m_GuidHigh: 14087561114114041226
+    m_Size: {x: 0.10481928, y: 0.14991835}
+    m_SpecifySize: 1
+    m_Name: Boliwekew Rice Terraces
+    m_Texture: {fileID: 2800000, guid: 05259e6ebb35b4178aa55fb6311281c3, type: 3}

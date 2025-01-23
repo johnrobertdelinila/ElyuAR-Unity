@@ -10,7 +10,7 @@ public class ImageTracking : MonoBehaviour
 {
     #if UNITY_IOS
     [DllImport("__Internal")]
-    private static extern void _OpenMapsWithAddress(string address, double latitude, double longitude);
+    private static extern void _OpenMapsWithAddress(double latitude, double longitude);
     [DllImport("__Internal")]
     private static extern void _ShowShareSheet(string text);
     [DllImport("__Internal")]
@@ -48,7 +48,7 @@ public class ImageTracking : MonoBehaviour
     {
         trackedImageManager = GetComponent<ARTrackedImageManager>();
 
-        // Initially hide all models and UI
+        // Initially hide all models
         foreach (var modelInfo in modelInfos)
         {
             if (modelInfo.prefab != null)
@@ -160,6 +160,9 @@ public class ImageTracking : MonoBehaviour
 
     private void UpdateUI(ModelInfo info)
     {
+        // Check if this is a different model than the current one
+        bool isNewModel = (currentModelInfo == null || currentModelInfo.name != info.name);
+        
         currentModelInfo = info;
         
         // Update text fields
@@ -171,6 +174,14 @@ public class ImageTracking : MonoBehaviour
         
         // Show the panel button
         showPanelButton.SetActive(true);
+        
+        // If the info panel is visible and this is a new model, play the audio
+        if (hiddenInfoPanel.activeSelf && isNewModel && info.audio != null)
+        {
+            audioSource.Stop(); // Stop any currently playing audio
+            audioSource.Play();
+            Debug.Log($"[UI] Playing audio for new model: {info.name}");
+        }
     }
 
     private void HideUI()
@@ -237,18 +248,17 @@ public class ImageTracking : MonoBehaviour
 
         double latitude = currentModelInfo.latitude;
         double longitude = currentModelInfo.longitude;
-        string locationName = currentModelInfo.title;
 
         #if UNITY_IOS
-            // Use the native iOS implementation
-            _OpenMapsWithAddress(locationName, latitude, longitude);
+            // Use the native iOS implementation with just coordinates
+            _OpenMapsWithAddress(latitude, longitude);
         #elif UNITY_ANDROID
-            // Open Google Maps
-            string uri = $"geo:{latitude},{longitude}?q={latitude},{longitude}({WWW.EscapeURL(locationName)})";
+            // Open Google Maps with just coordinates
+            string uri = $"geo:{latitude},{longitude}?q={latitude},{longitude}";
             try
             {
                 Application.OpenURL(uri);
-                Debug.Log($"[UI] Opening map at {latitude}, {longitude} for {locationName}");
+                Debug.Log($"[UI] Opening map at {latitude}, {longitude}");
             }
             catch (System.Exception e)
             {

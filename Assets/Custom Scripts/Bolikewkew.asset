@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ea37f995ac44a2f9734da55122dc79, type: 3}
+  m_Name: Bolikewkew
+  m_EditorClassIdentifier: 
+  spotName: Bolikewkew
+  title: Bolikewkew Rice Terraces
+  description: From the nabaloi word "bolixewxew" meaning spiral; a view of rice
+    fields depicting farming as one of the sources of income of the natives of Burgos;
+    a breathtaking view of nature and a recommended place for hiking. The stretch
+    of the Bolikewkew river is ideal for picnic activities; with inviting sporadically
+    located along the river pools. Bolikewkew is located in Brgy. Delles, about 4km
+    towards North from the Municipal Hall.
+  address: Burgos, La Union
+  image: {fileID: 21300000, guid: 64fb4504d859c4080a963572b41a4f06, type: 3}
+  latitude: 16.5405649401889
+  longitude: 120.46729043528303

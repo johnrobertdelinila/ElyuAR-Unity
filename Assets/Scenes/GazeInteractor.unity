@@ -1417,6 +1417,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 757226705543871320, guid: 64ddcf68fb8e74e41821ae913c8ca338,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: PhotoGallery
+      objectReference: {fileID: 0}
     - target: {fileID: 2253907297624447310, guid: 64ddcf68fb8e74e41821ae913c8ca338,
         type: 3}
       propertyPath: m_Name

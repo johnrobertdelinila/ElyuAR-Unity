@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FaceTrackable.unity
     guid: 6f7dd34f817e11b4683bc4eec4dd1883
+  - enabled: 1
+    path: Assets/Scenes/Socials.unity
+    guid: 957c8bcc374924237ac4362b781e468f
   - enabled: 0
     path: Assets/Scenes/ARScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
@@ -32,6 +35,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Mars.unity
     guid: a282edfabb8ab3f419383a715b379beb
+  - enabled: 1
+    path: Assets/Scenes/TouristSpotInfo.unity
+    guid: a7a35e717572c41bcb2153816f64b8bf
+  - enabled: 1
+    path: Assets/Scenes/PhotoGallery.unity
+    guid: c28159587072e44d7ae90fd14ec224d3
   - enabled: 1
     path: Assets/Scenes/PlantAPICall.unity
     guid: 1d6b355c3b2040642b7629e716bfb4e0
