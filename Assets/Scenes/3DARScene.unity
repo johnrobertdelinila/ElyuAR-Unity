@@ -948,10 +948,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tapuakan is a river in the municipality having smooth rocks and pristine
-    waters. It was adjudged as the Cleanest Inland Body of Water in the Province
-    (2016- 2018). This tourist site is cradled in lush and peaceful forests at the
-    base of Cordillera Mountains.
+  m_text: Tangadan Falls features 2 cascades. The main cascade is approximately 45
+    meters in height and the 2nd cascade is smaller at approximately 10 meters. The
+    below main cascade is the swimming area and where bamboo rafts are located. The
+    2nd cascade above the main cascade is where cliff diving is done.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26756459a100ea94486e0bbc758af36c, type: 2}
   m_sharedMaterial: {fileID: 2101998986676209182, guid: 26756459a100ea94486e0bbc758af36c,
@@ -6772,8 +6772,7 @@ MonoBehaviour:
       China Sea with a panoramic view of the harbor of San Fernando and China Sea,
       the Temple is a vast complex of stone carvings of Taoist disciples, and lions,
       arches, fountains, towers, pagodas, gardens, dormitory and spacious parking
-      space. Inside you will find the breathtaking 13 tiers spider-type dome, camphor-wood-carvings
-      of deities and many traditional Taoist interior decors.
+      space.
     latitude: 16.6212
     longitude: 120.3175
     audio: {fileID: 8300000, guid: 1464a5b322cbd4e58823ea9c65dae770, type: 3}

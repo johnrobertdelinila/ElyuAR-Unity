@@ -3,9 +3,15 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Runtime.InteropServices;
 
 public class TouristSpotInfoManager : MonoBehaviour
 {
+    #if UNITY_IOS
+    [DllImport("__Internal")]
+    private static extern void _OpenMapsWithAddress(double latitude, double longitude);
+    #endif
+
     [SerializeField] private TouristSpotData[] touristSpots;
     
     [Header("UI Text References")]
