@@ -288,7 +288,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1031.4, y: 1204.2}
+  m_SizeDelta: {x: 1082, y: 1204.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &263679311
 MonoBehaviour:
@@ -594,8 +594,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Urbiztondo Surf Area
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4945d3e0c2f505d488e6c69a935c2bca, type: 2}
-  m_sharedMaterial: {fileID: -5398197996171879528, guid: 4945d3e0c2f505d488e6c69a935c2bca,
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -709,7 +709,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1031.4, y: 1204.2}
+  m_SizeDelta: {x: 1082, y: 1204.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &366662648
 MonoBehaviour:
@@ -1015,8 +1015,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Baluarte Watch Tower
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4945d3e0c2f505d488e6c69a935c2bca, type: 2}
-  m_sharedMaterial: {fileID: -5398197996171879528, guid: 4945d3e0c2f505d488e6c69a935c2bca,
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1357,7 +1357,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1031.4, y: 1204.2}
+  m_SizeDelta: {x: 1082, y: 1204.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506980860
 MonoBehaviour:
@@ -1507,7 +1507,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1031.4, y: 1204.2}
+  m_SizeDelta: {x: 1082, y: 1204.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &536360612
 MonoBehaviour:
@@ -1655,7 +1655,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610148004
 MonoBehaviour:
@@ -1759,7 +1759,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1031.4, y: 1204.2}
+  m_SizeDelta: {x: 1082, y: 1204.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &614720515
 MonoBehaviour:
@@ -1907,7 +1907,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621198804
 MonoBehaviour:
@@ -2011,7 +2011,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1031.4, y: 1204.2}
+  m_SizeDelta: {x: 1082, y: 1204.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &629232389
 MonoBehaviour:
@@ -2297,7 +2297,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1031.4, y: 1204.2}
+  m_SizeDelta: {x: 1082, y: 1204.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664238672
 MonoBehaviour:
@@ -2467,8 +2467,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Bolikewkew Rice Terraces
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4945d3e0c2f505d488e6c69a935c2bca, type: 2}
-  m_sharedMaterial: {fileID: -5398197996171879528, guid: 4945d3e0c2f505d488e6c69a935c2bca,
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2602,8 +2602,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tapuakan River
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4945d3e0c2f505d488e6c69a935c2bca, type: 2}
-  m_sharedMaterial: {fileID: -5398197996171879528, guid: 4945d3e0c2f505d488e6c69a935c2bca,
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2857,7 +2857,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1362405499}
     - target: {fileID: 1391812937009547298, guid: 7ffa31debceb23a4c9b46fdd0a9e270f,
         type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -3249,7 +3249,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756669958
 MonoBehaviour:
@@ -3373,8 +3373,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Immuki Island
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4945d3e0c2f505d488e6c69a935c2bca, type: 2}
-  m_sharedMaterial: {fileID: -5398197996171879528, guid: 4945d3e0c2f505d488e6c69a935c2bca,
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3667,8 +3667,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1716390225}
   m_HandleRect: {fileID: 1716390224}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.41208956
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3906,8 +3906,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tangadan Falls Adventure
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4945d3e0c2f505d488e6c69a935c2bca, type: 2}
-  m_sharedMaterial: {fileID: -5398197996171879528, guid: 4945d3e0c2f505d488e6c69a935c2bca,
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4019,7 +4019,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &973384230
 MonoBehaviour:
@@ -4121,7 +4121,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &996753213
 MonoBehaviour:
@@ -4277,8 +4277,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f25931e03d91146e0b8e6b74f42fee0a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4425,7 +4425,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1031.4, y: 1204.2}
+  m_SizeDelta: {x: 1082, y: 1204.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1198452511
 MonoBehaviour:
@@ -4575,7 +4575,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1031.4, y: 1204.2}
+  m_SizeDelta: {x: 1082, y: 1204.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217186176
 MonoBehaviour:
@@ -4723,7 +4723,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1267847881
 MonoBehaviour:
@@ -4990,8 +4990,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Grape Farms
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4945d3e0c2f505d488e6c69a935c2bca, type: 2}
-  m_sharedMaterial: {fileID: -5398197996171879528, guid: 4945d3e0c2f505d488e6c69a935c2bca,
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5125,8 +5125,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Agoo EcoFun World
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4945d3e0c2f505d488e6c69a935c2bca, type: 2}
-  m_sharedMaterial: {fileID: -5398197996171879528, guid: 4945d3e0c2f505d488e6c69a935c2bca,
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5840,7 +5840,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1623440032
 MonoBehaviour:
@@ -5964,8 +5964,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ma-Cho Temple
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4945d3e0c2f505d488e6c69a935c2bca, type: 2}
-  m_sharedMaterial: {fileID: -5398197996171879528, guid: 4945d3e0c2f505d488e6c69a935c2bca,
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6079,7 +6079,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1031.4, y: 1204.2}
+  m_SizeDelta: {x: 1082, y: 1204.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1626257472
 MonoBehaviour:
@@ -6302,7 +6302,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1740154515
 MonoBehaviour:
@@ -6426,8 +6426,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: St. Christopher Parish
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4945d3e0c2f505d488e6c69a935c2bca, type: 2}
-  m_sharedMaterial: {fileID: -5398197996171879528, guid: 4945d3e0c2f505d488e6c69a935c2bca,
+  m_fontAsset: {fileID: 11400000, guid: 928da2220a0ff5e44aa484bdb0006131, type: 2}
+  m_sharedMaterial: {fileID: -7304394381272760782, guid: 928da2220a0ff5e44aa484bdb0006131,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6675,7 +6675,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1865845851
 MonoBehaviour:
@@ -6777,7 +6777,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888907742
 MonoBehaviour:
@@ -6972,6 +6972,7 @@ GameObject:
   - component: {fileID: 1905520499}
   - component: {fileID: 1905520498}
   - component: {fileID: 1905520500}
+  - component: {fileID: 1905520502}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -7042,11 +7043,11 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 1
   m_Spacing: 620
-  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 1
+  m_ChildControlWidth: 0
   m_ChildControlHeight: 1
-  m_ChildScaleWidth: 0
+  m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!114 &1905520500
@@ -7061,6 +7062,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8616bdb6436e4fd587c901c9b90ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!222 &1905520502
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905520496}
+  m_CullTransparentMesh: 1
 --- !u!1 &1965928976
 GameObject:
   m_ObjectHideFlags: 0
@@ -7370,7 +7379,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1267, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087854761
 MonoBehaviour:

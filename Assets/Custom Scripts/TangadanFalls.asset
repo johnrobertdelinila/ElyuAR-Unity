@@ -22,3 +22,9 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: d581cffbacf9e4b9fb055070932ce7c8, type: 3}
   latitude: 16.64360476
   longitude: 120.4490322
+  classification: Nature Tourism
+  operationalHours: '6:00 AM - 5:00 PM  '
+  environmentalFee: Environmental Fee - P 300.00
+  transportationOptions: 'Jeepney
+
+    habal-habal'

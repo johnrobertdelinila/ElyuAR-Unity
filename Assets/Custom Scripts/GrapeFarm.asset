@@ -24,3 +24,17 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 0fb7e110be42b4aa8b5a850b95573a4d, type: 3}
   latitude: 16.46334
   longitude: 120.33563
+  classification: Industrial Tourism
+  operationalHours: '8:00 AM - 5:00 PM  '
+  environmentalFee: 'No environmental fee  '
+  transportationOptions: 'Car
+
+    Motorcycle
+
+    Bicycle
+
+    Tricycle
+
+    Van
+
+    Jeepney'

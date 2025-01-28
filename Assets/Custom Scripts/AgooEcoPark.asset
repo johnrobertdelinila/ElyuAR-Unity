@@ -19,7 +19,20 @@ MonoBehaviour:
     bird watching, fishing, biking, horseback riding, and carabao riding are the
     activities that can be done in the attraction. It is surrounded by Aroo trees,
     similar to pine trees, which makes it a perfect venue for photo and video shoots.
-  address: Sta. Rita, Agoo, La Union
+  address: 'Sta. Rita West; Sta. Rita Central, Agoo, La Union '
   image: {fileID: 21300000, guid: f62db3e9b53004f1c96c3617accc0ae8, type: 3}
   latitude: 16.35344
   longitude: 120.34065
+  classification: Leisure and Recreation
+  operationalHours: 5:00 AM - 6:30 PM
+  environmentalFee: 'Environmental Fee - P 30.00 (Local)  P 15.00 (students & Senior
+    citizens) PWD - Free Entrance '
+  transportationOptions: 'Car
+
+    Motorcycle
+
+    Bicycle
+
+    Tricycle
+
+    Van'

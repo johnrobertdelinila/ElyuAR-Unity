@@ -21,7 +21,19 @@ MonoBehaviour:
     towers, pagodas, gardens, dormitory and spacious parking space. Inside you will
     find the breathtaking 13 tiers spider-type dome, camphor-wood-carvings of deities
     and many traditional Taoist interior decors.
-  address: Ma-Cho Temple Driveway, Quezon Ave, San Fernando, La Union
+  address: Brgy. 1, City of San Fernando, La Union
   image: {fileID: 21300000, guid: 938d5fe297bb5463999b80d4141ea602, type: 3}
   latitude: 16.621380157820695
   longitude: 120.31749919748508
+  classification: Cultural Tourism
+  operationalHours: '8:00 AM - 5:00 PM  '
+  environmentalFee: 'No Environmental Fee  '
+  transportationOptions: 'Bus
+
+    Van
+
+    Car
+
+    Tricycle
+
+    motorcycle'

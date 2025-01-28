@@ -20,9 +20,24 @@ MonoBehaviour:
     Luna, watching its industrious stone pickers finding a way for survival amidst
     the scorching hot sun. It was recently rehabilitated by the LGU with assistance
     from the National Historic Institute. It now features a Love Lock gate inspired
-    by a famous tourist spot in N Seoul Korea where lovers can make a pact by putting
-    a lock in the gate and throwing the keys.
+    by a famous tourist spot ni N Seoul Korea where lovers can make a pact by putting
+    a lock in the gate and throwing the keys
   address: 'Luna, La Union '
   image: {fileID: 21300000, guid: 37387008011074159b818dca20590776, type: 3}
   latitude: 16.8567576
   longitude: 120.3726038
+  classification: Cultural Tourism
+  operationalHours: '6:00 AM - 6:00 PM  '
+  environmentalFee: 'Environmental Fee - P 20.00 less 20% for Senior citizen and
+    5yrs old below   '
+  transportationOptions: 'Car
+
+    Motorcycle
+
+    Bicycle
+
+    Tricycle
+
+    Van
+
+'

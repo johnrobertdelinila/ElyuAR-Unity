@@ -14,13 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spotName: Bolikewkew
   title: Bolikewkew Rice Terraces
-  description: From the nabaloi word "bolixewxew" meaning spiral; a view of rice
-    fields depicting farming as one of the sources of income of the natives of Burgos;
-    a breathtaking view of nature and a recommended place for hiking. The stretch
-    of the Bolikewkew river is ideal for picnic activities; with inviting sporadically
+  description: From the nabaloi word "bolixewxew" meaning spiral ; a view of ricefields
+    depicting farming as one of the source of income of the natives of Burgos; a
+    breathtaking view of nature and a recommended place for hiking.The stretch of
+    the Bolikewkew river is ideal for picnic activities ;with inviting sporiadically
     located along the river pools. Bolikewkew is located in Brgy. Delles, about 4km
     towards North from the Municipal Hall.
-  address: Burgos, La Union
+  address: Delles, Burgos,La Union
   image: {fileID: 21300000, guid: 64fb4504d859c4080a963572b41a4f06, type: 3}
   latitude: 16.5405649401889
   longitude: 120.46729043528303
+  classification: Industrial Tourism
+  operationalHours: '8:00 AM - 5:00 PM   '
+  environmentalFee: 'No Environmental Fee  '
+  transportationOptions: 'Car
+
+    Motorcycle
+
+    Bicycle
+
+    Tricycle
+
+    Van'

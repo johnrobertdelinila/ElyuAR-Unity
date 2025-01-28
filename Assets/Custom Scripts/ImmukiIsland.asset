@@ -14,11 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spotName: Immuki Island
   title: Immuki Island
-  description: Immuki Island, formerly called Kaparingitan, is a stunning destination
-    known for its lagoon resembling a unique shape, thriving mangroves, crystal-clear
-    waters, and abundant marine life, with its name derived from sea slugs called
-    "babao."
+  description: Immuki Island was once called Kaparingitan in the old times. The word
+    Immuki was derived from a sea creature that can thrive only on the dead corals.
+    These are Sea Slugs or Babao. Babao or Bao is a Pangasenense term whick refer
+    to female genitalia which in Ilocano Term is UKI. Since then the word Immuki
+    is used since its main lagoon forms in the shape of female genital.Today Immuki
+    Island is a stunning island because its mangroves (Bantigue/Nirad). The crystal-clear
+    water and fishes are also an added attraction.
   address: Balaoan, La Union
   image: {fileID: 21300000, guid: 1a2965e49be5f474d8a7b0ccb26c9a57, type: 3}
   latitude: 16.8024
   longitude: 120.3268
+  classification: Nature Tourism
+  operationalHours: 8:00 AM - 5:00 PM
+  environmentalFee: 'Environmental Fee - P 30.00   Regular - P 50.00 '
+  transportationOptions: 'Car
+
+    Motorcycle
+
+    Bicycle
+
+    Tricycle
+
+    Van
+
+    Jeepney'

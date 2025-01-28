@@ -17,8 +17,20 @@ MonoBehaviour:
   description: Tapuakan is a river in the municipality having smooth rocks and pristine
     waters. It was adjudged as the Cleanest Inland Body of Water in the Province
     (2016- 2018). This tourist site is cradled in lush and peaceful forests at the
-    base of Cordillera Mountains.
+    base of Cordillera Mountains
   address: Pugo, La Union
   image: {fileID: 21300000, guid: 01f62ecf21876418495a35ba6aada465, type: 3}
   latitude: 16.321039
   longitude: 120.480932
+  classification: Nature Tourism
+  operationalHours: '8:00 AM - 5:00 PM  '
+  environmentalFee: 'Environmental fee : P10.00 '
+  transportationOptions: 'Car
+
+    Motorcycle
+
+    Bicycle
+
+    Tricycle
+
+    Van'

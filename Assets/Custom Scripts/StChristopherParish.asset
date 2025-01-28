@@ -15,10 +15,22 @@ MonoBehaviour:
   spotName: Christopher Parish
   title: St. Christopher Parish Church
   description: The church is a mix of Baroque architecture with Neoclassical features.
-    Its facade has a mixture of Baroque, Gothic and Moorish embellishments. This
-    is the only church in the north with three belfries and features an eye-catching
+    Its facade has a mixture of Baroque, Gothic and Moorish embelishments. This is
+    the only church in the north with three belfries and features an eye-catching
     ceiling mural.
   address: Bangar, La Union
   image: {fileID: 21300000, guid: d86ab1b22a4e84660a2992f22a873d99, type: 3}
   latitude: 16.983501
   longitude: 120.4236
+  classification: Cultural Tourism
+  operationalHours: '8:00 AM - 5:00 PM  '
+  environmentalFee: 'No Environmental Fee  '
+  transportationOptions: 'Car
+
+    Motorcycle
+
+    Bicycle
+
+    Tricycle
+
+    Van'
