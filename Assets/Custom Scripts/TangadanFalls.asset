@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ea37f995ac44a2f9734da55122dc79, type: 3}
   m_Name: TangadanFalls
   m_EditorClassIdentifier: 
-  spotName: Tangadal Falls
+  spotName: Tangadan Falls
   title: Tangadan Falls Adventure
   description: Tangadan Falls features 2 cascades. The main cascade is approximately
     45 meters in height and the 2nd cascade is smaller at approximately 10 meters.
