@@ -6775,7 +6775,7 @@ MonoBehaviour:
       space.
     latitude: 16.6212
     longitude: 120.3175
-    audio: {fileID: 8300000, guid: 1464a5b322cbd4e58823ea9c65dae770, type: 3}
+    audio: {fileID: 8300000, guid: c729af5e7c9b24111a50a9aa00ebe8b5, type: 3}
     websiteUrl: https://machotemple.org
   - prefab: {fileID: 1045831784}
     name: Loslosi Falls
@@ -6786,7 +6786,7 @@ MonoBehaviour:
       The 2nd cascade above the main cascade is where cliff diving is done.
     latitude: 16.6437
     longitude: 120.4487
-    audio: {fileID: 8300000, guid: a2b832276359147f9b9bec83aafe9068, type: 3}
+    audio: {fileID: 8300000, guid: 81d0b71e4a06f443c96d18bc0b134f25, type: 3}
     websiteUrl: 'https://launion.gov.ph/tangadan-falls-hidden-treasure-of-la-union/ '
   - prefab: {fileID: 395580882}
     name: Baluarte
@@ -6798,7 +6798,7 @@ MonoBehaviour:
       amidst the scorching hot sun. '
     latitude: 16.8568
     longitude: 120.3729
-    audio: {fileID: 8300000, guid: 61a213cf0fa5c41419cad2351f491e66, type: 3}
+    audio: {fileID: 8300000, guid: 1fe945084908e4e20acd87581910d55e, type: 3}
     websiteUrl: 'https://launion.gov.ph/pagwanawanan-a-glimpse-of-the-past/ '
   - prefab: {fileID: 843640388}
     name: Eco Park
