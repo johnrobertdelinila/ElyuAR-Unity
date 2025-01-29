@@ -46,29 +46,93 @@ public class ImageTracking : MonoBehaviour
 
     private void Awake()
     {
-        trackedImageManager = GetComponent<ARTrackedImageManager>();
-
-        // Initially hide all models
-        foreach (var modelInfo in modelInfos)
+        Debug.Log("[AR_INIT] Starting AR initialization");
+        try
         {
-            if (modelInfo.prefab != null)
+            trackedImageManager = GetComponent<ARTrackedImageManager>();
+            if (trackedImageManager == null)
             {
-                modelInfo.prefab.SetActive(false);
+                Debug.LogError("[AR_INIT] ARTrackedImageManager component not found!");
+                return;
             }
+            Debug.Log("[AR_INIT] ARTrackedImageManager initialized successfully");
+
+            // Initially hide all models
+            foreach (var modelInfo in modelInfos)
+            {
+                if (modelInfo == null)
+                {
+                    Debug.LogError("[AR_INIT] Null ModelInfo found in array");
+                    continue;
+                }
+
+                if (modelInfo.prefab != null)
+                {
+                    modelInfo.prefab.SetActive(false);
+                    Debug.Log($"[AR_INIT] Disabled prefab for {modelInfo.name}");
+                }
+                else
+                {
+                    Debug.LogError($"[AR_INIT] Null prefab for {modelInfo.name}");
+                }
+            }
+            
+            if (hiddenInfoPanel == null)
+            {
+                Debug.LogError("[AR_INIT] Hidden Info Panel reference is missing!");
+            }
+            if (showPanelButton == null)
+            {
+                Debug.LogError("[AR_INIT] Show Panel Button reference is missing!");
+            }
+            
+            hiddenInfoPanel?.SetActive(false);
+            showPanelButton?.SetActive(false);
+            Debug.Log("[AR_INIT] UI elements initialized");
         }
-        
-        hiddenInfoPanel.SetActive(false);
-        showPanelButton.SetActive(false);
+        catch (System.Exception e)
+        {
+            Debug.LogError($"[AR_INIT] Error during initialization: {e.Message}\nStack trace: {e.StackTrace}");
+        }
     }
 
     private void Start()
     {
-        // Remove the onClick listener since we'll set it in the Inspector
+        Debug.Log("[AR_CONFIG] Checking AR configuration");
+        if (trackedImageManager != null)
+        {
+            var config = trackedImageManager.currentConfiguration;
+            if (config != null)
+            {
+                Debug.Log($"[AR_CONFIG] Max tracked images: {config.maxNumberOfMovingImages}");
+                Debug.Log($"[AR_CONFIG] Reference image count: {config.referenceImages.count}");
+            }
+            else
+            {
+                Debug.LogError("[AR_CONFIG] No configuration found!");
+            }
+        }
     }
 
     private void OnEnable()
     {
-        trackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
+        Debug.Log("[AR_LIFECYCLE] OnEnable called");
+        try
+        {
+            if (trackedImageManager != null)
+            {
+                trackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
+                Debug.Log("[AR_LIFECYCLE] Successfully subscribed to trackedImagesChanged");
+            }
+            else
+            {
+                Debug.LogError("[AR_LIFECYCLE] trackedImageManager is null in OnEnable");
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"[AR_LIFECYCLE] Error in OnEnable: {e.Message}\nStack trace: {e.StackTrace}");
+        }
     }
 
     private void OnDisable()
@@ -91,29 +155,41 @@ public class ImageTracking : MonoBehaviour
 
     private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
-        // Handle added images
-        foreach (ARTrackedImage trackedImage in eventArgs.added)
+        Debug.Log($"[AR_TRACKING] Images changed - Added: {eventArgs.added.Count}, Updated: {eventArgs.updated.Count}, Removed: {eventArgs.removed.Count}");
+        
+        try
         {
-            UpdateModelTransform(trackedImage, true);
-        }
-
-        // Handle updated images
-        foreach (ARTrackedImage trackedImage in eventArgs.updated)
-        {
-            if (trackedImage.trackingState == TrackingState.Tracking)
+            // Handle added images
+            foreach (ARTrackedImage trackedImage in eventArgs.added)
             {
+                Debug.Log($"[AR_TRACKING] Added image: {trackedImage.referenceImage.name} - State: {trackedImage.trackingState}");
                 UpdateModelTransform(trackedImage, true);
             }
-            else
+
+            // Handle updated images
+            foreach (ARTrackedImage trackedImage in eventArgs.updated)
             {
+                Debug.Log($"[AR_TRACKING] Updated image: {trackedImage.referenceImage.name} - State: {trackedImage.trackingState}");
+                if (trackedImage.trackingState == TrackingState.Tracking)
+                {
+                    UpdateModelTransform(trackedImage, true);
+                }
+                else
+                {
+                    UpdateModelTransform(trackedImage, false);
+                }
+            }
+
+            // Handle removed images
+            foreach (ARTrackedImage trackedImage in eventArgs.removed)
+            {
+                Debug.Log($"[AR_TRACKING] Removed image: {trackedImage.referenceImage.name}");
                 UpdateModelTransform(trackedImage, false);
             }
         }
-
-        // Handle removed images
-        foreach (ARTrackedImage trackedImage in eventArgs.removed)
+        catch (System.Exception e)
         {
-            UpdateModelTransform(trackedImage, false);
+            Debug.LogError($"[AR_TRACKING] Error in OnTrackedImagesChanged: {e.Message}\nStack trace: {e.StackTrace}");
         }
     }
 
