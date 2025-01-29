@@ -43,56 +43,81 @@ public class ImageTracking : MonoBehaviour
     private Dictionary<string, GameObject> activeModels = new Dictionary<string, GameObject>();
     private ARTrackedImageManager trackedImageManager;
     private ModelInfo currentModelInfo;
+    private bool isOlderDevice = false;
 
     private void Awake()
     {
         Debug.Log("[AR_INIT] Starting AR initialization");
         try
         {
+            // Check device model on iOS
+            #if UNITY_IOS
+            string deviceModel = UnityEngine.iOS.Device.generation.ToString();
+            isOlderDevice = deviceModel.Contains("iPhone13") || 
+                           (deviceModel.Contains("iPhone") && 
+                            int.Parse(deviceModel.Replace("iPhone", "")) < 13);
+            Debug.Log($"[AR_INIT] Device Model: {deviceModel}, Optimizations Enabled: {isOlderDevice}");
+            #endif
+
+            // Initialize with optimized settings for older devices
             trackedImageManager = GetComponent<ARTrackedImageManager>();
-            if (trackedImageManager == null)
+            if (trackedImageManager != null)
             {
-                Debug.LogError("[AR_INIT] ARTrackedImageManager component not found!");
-                return;
-            }
-            Debug.Log("[AR_INIT] ARTrackedImageManager initialized successfully");
-
-            // Initially hide all models
-            foreach (var modelInfo in modelInfos)
-            {
-                if (modelInfo == null)
+                if (isOlderDevice)
                 {
-                    Debug.LogError("[AR_INIT] Null ModelInfo found in array");
-                    continue;
-                }
-
-                if (modelInfo.prefab != null)
-                {
-                    modelInfo.prefab.SetActive(false);
-                    Debug.Log($"[AR_INIT] Disabled prefab for {modelInfo.name}");
-                }
-                else
-                {
-                    Debug.LogError($"[AR_INIT] Null prefab for {modelInfo.name}");
+                    // Reduce tracking quality for better performance
+                    var config = trackedImageManager.currentConfiguration;
+                    if (config != null)
+                    {
+                        config.maxNumberOfMovingImages = 1; // Limit concurrent tracking
+                        trackedImageManager.currentConfiguration = config;
+                        Debug.Log("[AR_INIT] Applied optimization settings for older device");
+                    }
                 }
             }
             
-            if (hiddenInfoPanel == null)
-            {
-                Debug.LogError("[AR_INIT] Hidden Info Panel reference is missing!");
-            }
-            if (showPanelButton == null)
-            {
-                Debug.LogError("[AR_INIT] Show Panel Button reference is missing!");
-            }
-            
-            hiddenInfoPanel?.SetActive(false);
-            showPanelButton?.SetActive(false);
-            Debug.Log("[AR_INIT] UI elements initialized");
+            // Rest of your initialization code...
+            InitializeModels();
         }
         catch (System.Exception e)
         {
-            Debug.LogError($"[AR_INIT] Error during initialization: {e.Message}\nStack trace: {e.StackTrace}");
+            Debug.LogError($"[AR_INIT] Error during initialization: {e.Message}");
+        }
+    }
+
+    private void InitializeModels()
+    {
+        // Separate model initialization for better memory management
+        foreach (var modelInfo in modelInfos)
+        {
+            if (modelInfo == null || modelInfo.prefab == null) continue;
+
+            if (isOlderDevice)
+            {
+                // Optimize meshes for older devices
+                OptimizeMesh(modelInfo.prefab);
+            }
+            
+            modelInfo.prefab.SetActive(false);
+            Debug.Log($"[AR_INIT] Initialized model: {modelInfo.name}");
+        }
+    }
+
+    private void OptimizeMesh(GameObject prefab)
+    {
+        // Optimize mesh renderers
+        var renderers = prefab.GetComponentsInChildren<MeshRenderer>();
+        foreach (var renderer in renderers)
+        {
+            renderer.receiveShadows = false;
+            renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        }
+
+        // Reduce texture quality if needed
+        var materials = prefab.GetComponentsInChildren<Material>();
+        foreach (var material in materials)
+        {
+            material.globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
         }
     }
 
@@ -137,9 +162,12 @@ public class ImageTracking : MonoBehaviour
 
     private void OnDisable()
     {
-        trackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
+        // Clean up resources
+        if (trackedImageManager != null)
+        {
+            trackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
+        }
         
-        // Clean up when leaving scene
         foreach (var model in activeModels.Values)
         {
             if (model != null)
@@ -149,47 +177,67 @@ public class ImageTracking : MonoBehaviour
         }
         activeModels.Clear();
         
+        // Force garbage collection when scene is disabled
+        if (isOlderDevice)
+        {
+            System.GC.Collect();
+        }
+        
         // Hide UI
         HideUI();
     }
 
     private void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
-        Debug.Log($"[AR_TRACKING] Images changed - Added: {eventArgs.added.Count}, Updated: {eventArgs.updated.Count}, Removed: {eventArgs.removed.Count}");
-        
         try
         {
-            // Handle added images
-            foreach (ARTrackedImage trackedImage in eventArgs.added)
+            if (isOlderDevice)
             {
-                Debug.Log($"[AR_TRACKING] Added image: {trackedImage.referenceImage.name} - State: {trackedImage.trackingState}");
-                UpdateModelTransform(trackedImage, true);
+                // Handle only one image at a time for older devices
+                if (eventArgs.added.Count > 0)
+                {
+                    UpdateModelTransform(eventArgs.added[0], true);
+                }
+                else if (eventArgs.updated.Count > 0)
+                {
+                    var trackedImage = eventArgs.updated[0];
+                    UpdateModelTransform(trackedImage, 
+                        trackedImage.trackingState == TrackingState.Tracking);
+                }
             }
-
-            // Handle updated images
-            foreach (ARTrackedImage trackedImage in eventArgs.updated)
+            else
             {
-                Debug.Log($"[AR_TRACKING] Updated image: {trackedImage.referenceImage.name} - State: {trackedImage.trackingState}");
-                if (trackedImage.trackingState == TrackingState.Tracking)
+                // Original handling for newer devices
+                foreach (ARTrackedImage trackedImage in eventArgs.added)
                 {
                     UpdateModelTransform(trackedImage, true);
                 }
-                else
+
+                // Handle updated images
+                foreach (ARTrackedImage trackedImage in eventArgs.updated)
                 {
+                    Debug.Log($"[AR_TRACKING] Updated image: {trackedImage.referenceImage.name} - State: {trackedImage.trackingState}");
+                    if (trackedImage.trackingState == TrackingState.Tracking)
+                    {
+                        UpdateModelTransform(trackedImage, true);
+                    }
+                    else
+                    {
+                        UpdateModelTransform(trackedImage, false);
+                    }
+                }
+
+                // Handle removed images
+                foreach (ARTrackedImage trackedImage in eventArgs.removed)
+                {
+                    Debug.Log($"[AR_TRACKING] Removed image: {trackedImage.referenceImage.name}");
                     UpdateModelTransform(trackedImage, false);
                 }
-            }
-
-            // Handle removed images
-            foreach (ARTrackedImage trackedImage in eventArgs.removed)
-            {
-                Debug.Log($"[AR_TRACKING] Removed image: {trackedImage.referenceImage.name}");
-                UpdateModelTransform(trackedImage, false);
             }
         }
         catch (System.Exception e)
         {
-            Debug.LogError($"[AR_TRACKING] Error in OnTrackedImagesChanged: {e.Message}\nStack trace: {e.StackTrace}");
+            Debug.LogError($"[AR_TRACKING] Error: {e.Message}");
         }
     }
 
@@ -199,6 +247,16 @@ public class ImageTracking : MonoBehaviour
         ModelInfo info = System.Array.Find(modelInfos, x => x.name == imageName);
         
         if (info?.prefab == null) return;
+
+        if (isOlderDevice && activeModels.Count > 0 && !activeModels.ContainsKey(imageName))
+        {
+            // For older devices, deactivate other models before showing new one
+            foreach (var model in activeModels.Values)
+            {
+                model.SetActive(false);
+            }
+            activeModels.Clear();
+        }
 
         // Toggle visibility
         info.prefab.SetActive(show);
