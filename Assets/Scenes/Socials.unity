@@ -1114,7 +1114,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ' https://www.instagram.com/lovelaunion/'
+          m_StringArgument: https://www.instagram.com/lovelaunion/
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &460436667
@@ -2340,8 +2340,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "\u2022\thttps://docs.google.com/forms/d/e/1FAIpQLSdzj9Xy5Dn9qyMGNSy_gNnxk3UbLhElZ3iHDN1z0wILGnC4Hg/viewf
-            orm"
+          m_StringArgument: https://docs.google.com/forms/d/e/1FAIpQLSdzj9Xy5Dn9qyMGNSy_gNnxk3UbLhElZ3iHDN1z0wILGnC4Hg/viewform
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1712705532
