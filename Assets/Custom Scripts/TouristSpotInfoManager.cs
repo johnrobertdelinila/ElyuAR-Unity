@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Runtime.InteropServices;
+using UnityEngine.SceneManagement;
 
 public class TouristSpotInfoManager : MonoBehaviour
 {
@@ -103,5 +104,12 @@ public class TouristSpotInfoManager : MonoBehaviour
                 Application.OpenURL($"https://www.google.com/maps/search/?api=1&query={currentSpotData.latitude},{currentSpotData.longitude}");
             }
         #endif
+    }
+
+    public void OnLocationSelected()
+    {
+        string locationName = SceneDataManager.GetSelectedSpot();
+        Debug.Log($"[TOURISTSPOTINFO] Selected location: {locationName}");
+        SceneManager.LoadScene("IndividualARScene");  // Your AR scene name
     }
 }
